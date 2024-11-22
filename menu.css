@@ -1,0 +1,240 @@
+:root {
+    /**
+    *Colors
+    */
+    --gold-crayola: hsl(38, 61%, 73%);
+    --quick-silver: hsla(0, 0%, 65%, 1);
+    --davys-grey: hsla(30, 3%, 34%, 1);
+    --smoky-black-1: hsla(40, 12%, 5%, 1);
+    --smoky-black-2: hsla(30, 8%, 5%, 1);
+    --smoky-black-3: hsla(0, 3%, 7%, 1);
+    --eerie-black-1: hsla(210, 4%, 9%, 1);
+    --eerie-black-2: hsla(210, 4%, 11%, 1);
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --eerie-black-4: hsla(0, 0%, 13%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+    --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+    --black: hsla(0, 0%, 0%, 1);
+    --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+    --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+
+    /**
+    *GRADIENT Color
+    */
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3)33.33% 50%, transparent 66.66% 75%);
+    --gradient-1: linear-gradient(to top, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.7), transparent);
+
+    /**
+    *TYPOGRAPHY
+    */
+    
+
+    /**
+    *font fa
+    */
+    --fontFamily-forum: 'Forum' cursive;
+    --fontFamily-dm_sans: 'DM Sans', sans-serif;
+
+    /**
+    *font size
+    */
+    --fontSize-display-1: calc(1.1rem + 5.2vw);
+    --fontSize-headLine-1: calc(2rem + 2.5vw);
+    --fontSize-headLine-2: calc(1.3rem + 2.4vw);
+    --fontSize-title-1: calc(1.6rem + 1.2vw);
+    --fontSize-title-2: 2.2rem;
+    --fontSize-title-3: 2.1rem;
+    --fontSize-title-4: calc(1.6rem + 1.2vw);
+    --fontSize-body-1: 2.4rem;
+    --fontSize-body-2: 1.6rem;
+    --fontSize-body-3: 1.8rem;
+    --fontSize-body-4: 1.6rem;
+    --fontSize-label-1: 1.4rem;
+    --fontSize-label-2: 1.2rem;
+
+    /*font weight*/
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /*line height*/
+    --lineHeight-1: 1rem;
+    --lineHeight-2: 1.2rem;
+    --lineHeight-3: 1.5rem;
+    --lineHeight-4: 1.6rem;
+    --lineHeight-5: 1.85rem;
+    --lineHeight-6: 1.4rem;
+
+    /*letter spacing*/
+    --letterSpacing-1: 0.15em;
+    --letterSpacing-2: 0.4em;
+    --letterSpacing-3: 0.2em;
+    --letterSpacing-4: 0.3em;
+    --letterSpacing-5: 3px;
+
+    /*spacing*/
+    --section-space: 70px;
+
+    /*shadow*/
+    --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+
+    /*border radius*/
+    --radius-24: 24px;
+    --radius-circle: 50%;
+
+    /*transition*/
+    --transition-1: 250ms ease;
+    --transition-2: 500ms ease;
+    --transition-3: 1000ms ease;
+}
+/*-----------------------------------*\
+  #MENU
+\*-----------------------------------*/
+.menu{
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+}
+.menu .section-title{
+    margin-block-end: 40px;
+ }
+ .menu .grid-list{
+   margin-block-end: 30px;
+ }
+ .menu-card{
+   display: flex;
+   align-items: flex-start;
+   gap: 20px;
+ }
+ .hover\:card .card-banner{
+   background-color: var(--gold-crayola);
+ }
+ .hover\:card .card-banner .img-cover{
+   transition: var(--transition-2);
+ }
+ #soup{
+   width: 100px;
+   height: 100px;
+ }
+ #cake{
+   width: 100px;
+   height: 100px;
+ }
+ #drinks{
+   width: 100px;
+   height: 100px;
+ }
+ .hover\:card:is(:hover, :focus-within) .card-banner .img-cover{
+   opacity: 0.7;
+   transform: scale(1.05);
+ }
+ .menu-card .card-banner{
+   flex-shrink: 0;
+   border-radius: var(--radius-24);
+ }
+ .menu .card-title{
+  color: var(--white);
+ }
+ .menu-card .card-title{
+   transition: var(--transition-1);
+ }
+ .menu-card .card-title:is(:hover, :focus-visible) {
+   color: var(--gold-crayola);
+ }
+ .menu-card .badge{
+   background-color: var(--gold-crayola);
+   color: var(--eerie-black-1);
+   font-family: var(--fontFamily-forum);
+   max-width: max-content;
+   line-height: var(--lineHeight-6);
+   text-transform: uppercase;
+   padding-inline: 10px;
+   margin-block-start: 10px;
+ }
+ .menu-card .span{
+   color: var(--gold-crayola);
+   margin-block: 10px;
+ }
+ .menu-card .card-text{
+   color: var(--quick-silver);
+   line-height: var(--lineHeight-4);
+ }
+ .menu-text .span{
+   display: inline-block;
+   color: var(--gold-crayola);
+ }
+ .menu .btn{
+   margin-inline: auto;
+   margin-block-start: 26px;
+ }
+ .menu .shape{
+   display: block;
+   width: 70%;
+ }
+ .menu .shape-2{
+   top: 0;
+   left: 0;
+ }
+ .menu .shape-3{
+   bottom: 0;
+   right: 0;
+ }
+ @media (min-width: 575px){
+  /**
+  *mennu
+  */
+  .menu-card .title-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+  }
+  .menu-card .badge{
+    margin-block-start: 0;
+  }
+  .menu-card .span{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+  }
+  .menu-card .span::before{
+    content: "";
+    height: 6px;
+    flex-grow: 1;
+    border-block: 1px solid var(--white-alpha-20);
+  }
+}
+@media (min-width: 992px){
+  /**
+  *menu
+  */
+  .menu .grid-list{
+    position: relative;
+    column-gap: 90px;
+  }
+  .menu .grid-list::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    border-inline-start: 1px solid var(--white-alpha-20);
+  }
+}
+@media (min-width: 1200px){
+   /**
+  *menu
+  */
+  .menu .grid-list{
+    gap: 55px 200px;
+    margin-block-end: 55px;
+  }
+}
+@media (min-width: 1400px){
+  .menu .grid-list{
+    gap: 45px 50px;
+    margin-block-end: 45px;
+  }
+}
